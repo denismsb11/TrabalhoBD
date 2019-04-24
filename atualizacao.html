@@ -14,7 +14,7 @@
     <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
     <link href="css/styleindex.css" type="text/css" rel="stylesheet" media="screen,projection" />
-    <link href="css/styleadmin.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/stylecadastro.css" type="text/css" rel="stylesheet" media="screen,projection" />
 </head>
 
 <body>
@@ -35,88 +35,80 @@
             <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         </div>
     </nav>
+
     <div class="row">
         <div class="col s12 center">
             <h3><i class="mdi-content-send brown-text"></i></h3>
-            <h4 class="white-text">Chefe de Cozinha - Administrador</h4>
+            <h4>Atualizar Receita</h4>
             <hr>
         </div>
     </div>
-    <br>
-
     <div class="container">
-        <div class="center">
-            <h5 class="white-text">Opções sobre Receitas</h5>
-        </div>
-        <ul class="collapsible">
-            <li>
-                <div class="collapsible-header"><i class="fas fa-hamburger fa-4x"></i>Adicionar Receita</div>
-                <div class="collapsible-body">
-                    <span class="white-text">Adicione a receita que você acredita ser incrível</span>
-                    <br>
-                    <br>
-                    <a class="waves-effect waves-light btn" href="addreceita.html">Adicionar</a>
+        <div class="row">
+            <form class="col l7 s12">
+                <div class="row">
+                    <div class="input-field col l10 s10">
+                        <input id="nome-receita" type="text" class="validate">
+                        <label for="nome-receita">Nome da Prato</label>
+                    </div>
                 </div>
-            </li>
-            <li>
-                <div class="collapsible-header"><i class="fas fa-pizza-slice fa-4x"></i>Avaliar Receita</div>
-                <div class="collapsible-body">
-                    <span class="white-text">Coloque um nota para as receitas</span>
-                    <br>
-                    <br>
-                    <a class="waves-effect waves-light btn" href="avaliarreceita.html">Avaliar</a>
+                <div class="row">
+                    <div class="input-field col s10 validate">
+                        <select>
+                            <option value="" disabled selected>Tipo de Prato</option>
+                            <option value="1">Entrada</option>
+                            <option value="2">Principal</option>
+                            <option value="3">Sobremesa</option>
+                        </select>
+                    </div>
                 </div>
-            </li>
-            <li>
-                <div class="collapsible-header"><i class="fas fa-drumstick-bite fa-4x"></i>Remover Receita</div>
-                <div class="collapsible-body">
-                    <span class="white-text">Remova a receita</span>
-                    <br>
-                    <br>
-                    <a class="waves-effect waves-light btn" href="removerreceita.html">Remover</a>
+                <div class="row">
+                    <di vclass="col s6">
+                        <div class="input-field col l10 s10">
+                            <textarea id="textarea1" class="materialize-textarea"></textarea>
+                            <label for="textarea1">Receita</label>
+                        </div>
                 </div>
-            </li>
-            <li>
-                <div class="collapsible-header"><i class="fas fa-hotdog fa-4x"></i>Atualizar Receita</div>
-                <div class="collapsible-body">
-                    <span class="white-text">Atualize uma informação sobre a receita</span>
-                    <br>
-                    <br>
-                    <a class="waves-effect waves-light btn" href="atualizarreceita.html">Atualizar</a>
+                <div class="row">
+                    <div class="file-field input-field col s10">
+                        <div class="btn">
+                            <span>Imagem</span>
+                            <input type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text">
+                        </div>
+                    </div>
                 </div>
-            </li>
-        </ul>
-    </div>
-    <br>
+            </form>
+            <div class="col l5 s12 center">
+                <h3><i class="mdi-content-send brown-text"></i></h3>
+                <div class="card">
+                    <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="photos/lasanha.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Quinta-Feira</span>
+                    </div>
+                    <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">Card Title<i
+                                class="material-icons right">close</i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    </div>
+                </div>
 
-    <div class="container">
-        <div class="center">
-            <h5 class="white-text">Opções sobre Ingredientes</h5>
+            </div>
         </div>
-        <ul class="collapsible">
-            <li>
-                <div class="collapsible-header"><i class="fas fa-cookie-bite fa-4x"></i>Adicionar Ingrediente</div>
-                <div class="collapsible-body">
-                    <span class="white-text">Adicione um ingrediente</span>
-                    <br>
-                    <br>
-                    <button class="waves-effect waves-light btn">Adicionar</button>
-                </div>
-            </li>
-            <li>
-                <div class="collapsible-header"><i class="fas fa-cheese"></i>Remover Ingrediente</div>
-                <div class="collapsible-body">
-                    <span class="white-text">Remova um ingrediente</span>
-                    <br>
-                    <br>
-                    <button class="waves-effect waves-light btn">Remover</button>
-                </div>
-            </li>
-        </ul>
     </div>
 
     <br>
+    <div class="center">
+        <button class="waves-effect waves-light btn">Atualizar</button>
+    </div>
+    </div>
+    </div>
     <br>
+
 
     <footer class="page-footer">
         <div class="container">
@@ -159,10 +151,13 @@
     <script src="js/init.js"></script>
     <script>
         $(document).ready(function () {
-            $('.collapsible').collapsible();
+            $('select').formSelect();
+        });
+
+        $(document).ready(function () {
+            $('.materialboxed').materialbox();
         });
     </script>
-
 </body>
 
 </html>
