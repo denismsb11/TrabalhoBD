@@ -1,16 +1,25 @@
-const express = require('express')
-const db = require('./src/config/db')
+const express = require("express");
+const bodyParser = require('body-parser')
+const db = require("./src/config/db");
+const AutorRoutes = require("./src/modules/autor/AutorRoutes");
 
-const app = express()
+const app = express();
 const port = process.env.PORT || 3001;
-const domain = 'localhost'
+const domain = "localhost";
 
-// app.db = db
+app.db = db;
 
-app.get('/', (req, res) => {
-    res.status(200).send('Hello')
-})
+app.use(bodyParser.json())
+
+// Rotas
+app.use(AutorRoutes);
+
+app.get("/", (req, res) => {
+  res.status(200).send("Hello World");
+});
+
+app.set("json spaces", 4);
 
 app.listen(port, domain, () => {
-    console.log(`Servidor disponível na porta ${port}`)
-})
+  console.log(`Servidor disponível na porta ${port}`);
+});
