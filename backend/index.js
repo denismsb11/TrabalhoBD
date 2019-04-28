@@ -20,6 +20,6 @@ app.get("/", (req, res) => {
 
 app.set("json spaces", 4);
 
-app.listen(port, domain, () => {
+app.listen(port, () => {
   console.log(`Servidor disponível na porta ${port}`);
 });
